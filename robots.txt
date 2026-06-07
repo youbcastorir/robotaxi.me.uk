@@ -1,0 +1,23 @@
+# RoboTaxi UK — robots.txt
+# https://robotaxi.me.uk
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (add as needed)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Allow important assets
+Allow: /style.css
+Allow: /app.js
+Allow: /services.js
+Allow: /booking.js
+Allow: /manifest.json
+
+# Sitemap location
+Sitemap: https://robotaxi.me.uk/sitemap.xml
+
+# Crawl delay (be kind to small servers)
+Crawl-delay: 2
