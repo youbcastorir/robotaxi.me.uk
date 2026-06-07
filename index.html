@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboTaxi UK — Autonomous Mobility &amp; Delivery Solutions</title>
+  <meta name="description" content="RoboTaxi UK is the future of urban mobility. Autonomous taxi services, smart package delivery, last-mile logistics, and corporate transportation across the United Kingdom." />
+  <meta name="keywords" content="Robotaxi UK, Autonomous Taxi Service, Smart Mobility UK, Autonomous Delivery UK, Future Transportation, Last Mile Delivery, Urban Mobility Solutions" />
+  <meta name="author" content="RoboTaxi UK" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://robotaxi.me.uk/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://robotaxi.me.uk/" />
+  <meta property="og:title" content="RoboTaxi UK — Autonomous Mobility & Delivery" />
+  <meta property="og:description" content="The future of urban mobility is here. Autonomous taxis, smart delivery, last-mile logistics across the UK." />
+  <meta property="og:image" content="https://robotaxi.me.uk/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="RoboTaxi UK" />
+
+  <!-- Twitter/X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@RoboTaxiUK" />
+  <meta name="twitter:title" content="RoboTaxi UK — Autonomous Mobility & Delivery" />
+  <meta name="twitter:description" content="The future of urban mobility is here. Autonomous taxis, smart delivery, last-mile logistics across the UK." />
+  <meta name="twitter:image" content="https://robotaxi.me.uk/og-image.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["TransportationService", "LocalBusiness"],
+    "name": "RoboTaxi UK",
+    "url": "https://robotaxi.me.uk",
+    "logo": "https://robotaxi.me.uk/logo.png",
+    "description": "Autonomous mobility and delivery solutions across the United Kingdom.",
+    "telephone": "+44-612-605-737",
+    "email": "salatrir@gmail.com",
+    "areaServed": ["London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Glasgow", "Edinburgh", "Bristol"],
+    "serviceType": ["Autonomous Taxi", "Package Delivery", "Last-Mile Logistics", "Corporate Transportation"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    }
+  }
+  </script>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00f0ff" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <!-- ═══ PRELOADER ═══ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">R<span>T</span></div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p class="preloader-text">Initialising Autonomous Systems…</p>
+    </div>
+  </div>
+
+  <!-- ═══ CURSOR ═══ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>ROBO<span class="logo-accent">TAXI</span><span class="logo-bracket">]</span>
+        <span class="logo-uk">UK</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#delivery" class="nav-link">Delivery</a></li>
+        <li><a href="#business" class="nav-link">Business</a></li>
+        <li><a href="#areas" class="nav-link">Coverage</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#booking" class="nav-link btn-nav-book">Book Now</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="toggle-icon">◐</span>
+        </button>
+        <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="btn-whatsapp-nav">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="home" class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-scanline"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        UK Autonomous Mobility Platform
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">The Future of</span>
+        <span class="title-line title-accent">Urban Mobility</span>
+        <span class="title-line">Is Here.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Autonomous passenger transport, intelligent package delivery, and smart last-mile logistics — redefining how Britain moves.
+      </p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn-primary">
+          <span>Book a Journey</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn-secondary">Explore Services</a>
+        <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="btn-whatsapp-hero">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="8">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Cities Covered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="24">0</span><span class="stat-plus">/7</span>
+          <span class="stat-label">Service Hours</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Electric Fleet</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="vehicle-showcase">
+        <div class="vehicle-glow"></div>
+        <div class="vehicle-body">
+          <div class="vehicle-top"></div>
+          <div class="vehicle-cabin">
+            <div class="cabin-window"></div>
+            <div class="cabin-sensor">
+              <div class="sensor-ring"></div>
+              <div class="sensor-ring sensor-ring-2"></div>
+            </div>
+          </div>
+          <div class="vehicle-base">
+            <div class="wheel wheel-l"></div>
+            <div class="wheel wheel-r"></div>
+          </div>
+        </div>
+        <div class="scan-line"></div>
+        <div class="route-dots">
+          <span class="dot dot-1"></span>
+          <span class="dot dot-2"></span>
+          <span class="dot dot-3"></span>
+        </div>
+        <div class="data-readout">
+          <span class="readout-line">◉ AUTO PILOT ENGAGED</span>
+          <span class="readout-line">◎ ROUTE: LONDON → HEATHROW</span>
+          <span class="readout-line">◈ ETA: 23 MIN</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#services" class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- ═══ SERVICES TICKER ═══ -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span>AUTONOMOUS TRANSPORT</span><span class="ticker-sep">◈</span>
+      <span>SMART DELIVERY</span><span class="ticker-sep">◈</span>
+      <span>LAST-MILE LOGISTICS</span><span class="ticker-sep">◈</span>
+      <span>CORPORATE MOBILITY</span><span class="ticker-sep">◈</span>
+      <span>AIRPORT TRANSFERS</span><span class="ticker-sep">◈</span>
+      <span>FLEET SOLUTIONS</span><span class="ticker-sep">◈</span>
+      <span>URBAN MOBILITY</span><span class="ticker-sep">◈</span>
+      <span>ZERO EMISSION</span><span class="ticker-sep">◈</span>
+      <span>AUTONOMOUS TRANSPORT</span><span class="ticker-sep">◈</span>
+      <span>SMART DELIVERY</span><span class="ticker-sep">◈</span>
+      <span>LAST-MILE LOGISTICS</span><span class="ticker-sep">◈</span>
+      <span>CORPORATE MOBILITY</span><span class="ticker-sep">◈</span>
+      <span>AIRPORT TRANSFERS</span><span class="ticker-sep">◈</span>
+      <span>FLEET SOLUTIONS</span><span class="ticker-sep">◈</span>
+      <span>URBAN MOBILITY</span><span class="ticker-sep">◈</span>
+      <span>ZERO EMISSION</span><span class="ticker-sep">◈</span>
+    </div>
+  </div>
+
+  <!-- ═══ PASSENGER TRANSPORT SERVICES ═══ -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01 PASSENGER</span>
+        <h2 class="section-title">Autonomous <span class="accent">Passenger</span> Transport</h2>
+        <p class="section-desc">Experience a new era of travel — safe, efficient, fully electric autonomous vehicles at your command.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+
+      <div class="whatsapp-banner">
+        <div class="wa-banner-content">
+          <div class="wa-text">
+            <h3>Ready to experience autonomous travel?</h3>
+            <p>Chat with our team on WhatsApp — available 24/7</p>
+          </div>
+          <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="btn-whatsapp-banner">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Start WhatsApp Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DELIVERY SERVICES ═══ -->
+  <section id="delivery" class="section delivery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02 DELIVERY</span>
+        <h2 class="section-title">Smart <span class="accent">Delivery</span> Solutions</h2>
+        <p class="section-desc">Autonomous drones and ground vehicles powering the next generation of UK logistics.</p>
+      </div>
+      <div class="delivery-grid" id="deliveryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══ BUSINESS SOLUTIONS ═══ -->
+  <section id="business" class="section business-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03 BUSINESS</span>
+        <h2 class="section-title">Enterprise <span class="accent">Solutions</span></h2>
+        <p class="section-desc">Scalable autonomous mobility infrastructure built for modern UK businesses.</p>
+      </div>
+      <div class="business-grid" id="businessGrid"></div>
+
+      <div class="enterprise-cta-box">
+        <div class="ecta-content">
+          <h3>Enterprise Partnership Programme</h3>
+          <p>Integrate RoboTaxi UK into your operations. Bespoke pricing, dedicated account management, and priority deployment.</p>
+          <div class="ecta-actions">
+            <a href="#booking" class="btn-primary">Request Enterprise Demo</a>
+            <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="btn-whatsapp-small">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Enterprise Team
+            </a>
+          </div>
+        </div>
+        <div class="ecta-visual">
+          <div class="ecta-chart">
+            <div class="chart-bar" style="--h:60%"><span>Q1</span></div>
+            <div class="chart-bar" style="--h:75%"><span>Q2</span></div>
+            <div class="chart-bar" style="--h:55%"><span>Q3</span></div>
+            <div class="chart-bar" style="--h:90%"><span>Q4</span></div>
+          </div>
+          <p class="ecta-chart-label">Fleet Efficiency Index</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BOOKING ═══ -->
+  <section id="booking" class="section booking-section">
+    <div class="booking-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04 BOOKING</span>
+        <h2 class="section-title">Book a <span class="accent">Journey</span></h2>
+        <p class="section-desc">Schedule your autonomous transport or delivery request in seconds.</p>
+      </div>
+
+      <div class="booking-layout">
+        <div class="booking-form-wrap">
+          <div class="booking-tabs">
+            <button class="booking-tab active" data-tab="passenger">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Passenger
+            </button>
+            <button class="booking-tab" data-tab="delivery">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              Delivery
+            </button>
+            <button class="booking-tab" data-tab="business">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Business
+            </button>
+          </div>
+
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Pickup Location</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <input type="text" name="pickup" id="pickup" placeholder="Enter pickup address" class="form-input" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Destination</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                  <input type="text" name="destination" id="destination" placeholder="Where to?" class="form-input" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Service Type</label>
+                <div class="input-wrap select-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                  <select name="serviceType" id="serviceType" class="form-input form-select" required>
+                    <option value="">Select service…</option>
+                    <option value="city">City Transport</option>
+                    <option value="airport">Airport Transfer</option>
+                    <option value="corporate">Corporate Travel</option>
+                    <option value="delivery-std">Standard Delivery</option>
+                    <option value="delivery-same">Same-Day Delivery</option>
+                    <option value="delivery-express">Express Delivery</option>
+                    <option value="logistics">Business Logistics</option>
+                    <option value="enterprise">Enterprise Fleet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Date &amp; Time</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <input type="datetime-local" name="datetime" id="datetime" class="form-input" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input type="text" name="name" id="name" placeholder="Your full name" class="form-input" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <input type="email" name="email" id="email" placeholder="your@email.com" class="form-input" required />
+                </div>
+              </div>
+              <div class="form-group form-full">
+                <label class="form-label">Phone / WhatsApp</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <input type="tel" name="phone" id="phone" placeholder="+44 xxxx xxxxxx" class="form-input" />
+                </div>
+              </div>
+              <div class="form-group form-full">
+                <label class="form-label">Additional Notes</label>
+                <div class="input-wrap">
+                  <textarea name="notes" id="notes" placeholder="Special requirements, package details, number of passengers…" class="form-input form-textarea" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                <span class="btn-text">Submit Booking Request</span>
+                <span class="btn-loading" style="display:none">Processing…</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="btn-whatsapp-form">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Book via WhatsApp
+              </a>
+            </div>
+            <div id="formMessage" class="form-message" style="display:none"></div>
+          </form>
+        </div>
+
+        <div class="booking-info">
+          <h3>Why Book With Us?</h3>
+          <ul class="booking-perks">
+            <li><span class="perk-icon">⚡</span><div><strong>Instant Confirmation</strong><p>Receive booking confirmation immediately via email and WhatsApp.</p></div></li>
+            <li><span class="perk-icon">🛡</span><div><strong>Safety First</strong><p>All journeys monitored in real-time with emergency override systems.</p></div></li>
+            <li><span class="perk-icon">🌿</span><div><strong>Zero Emissions</strong><p>100% electric fleet. Every journey carbon-neutral.</p></div></li>
+            <li><span class="perk-icon">🕐</span><div><strong>24/7 Availability</strong><p>Book at any time. Our platform never sleeps.</p></div></li>
+          </ul>
+          <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="btn-whatsapp-sidebar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp Instead
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICE AREAS ═══ -->
+  <section id="areas" class="section areas-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05 COVERAGE</span>
+        <h2 class="section-title">Service <span class="accent">Areas</span></h2>
+        <p class="section-desc">Expanding across the United Kingdom's major cities and metropolitan areas.</p>
+      </div>
+      <div class="areas-grid" id="areasGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-content">
+          <span class="section-tag">// 06 ABOUT US</span>
+          <h2 class="section-title">Reshaping <span class="accent">British Mobility</span></h2>
+          <p class="about-lead">RoboTaxi UK is building the autonomous mobility infrastructure for a smarter, greener, more connected United Kingdom.</p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">◎</div>
+              <div>
+                <h4>Our Vision</h4>
+                <p>A fully autonomous UK transport network that is safer, cheaper, and cleaner than anything that exists today. We are making that vision a reality, one city at a time.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">◈</div>
+              <div>
+                <h4>Our Technology</h4>
+                <p>Advanced sensor fusion, LiDAR mapping, and AI-driven route optimisation enable our platform to navigate the complexity of UK urban environments with precision.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">◉</div>
+              <div>
+                <h4>Safety Commitment</h4>
+                <p>Every journey is backed by multi-layer safety architecture, real-time remote monitoring, and full regulatory compliance with UK AV standards and DVSA guidelines.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">◐</div>
+              <div>
+                <h4>Sustainability</h4>
+                <p>100% electric fleet, optimised routing to reduce congestion, and a commitment to net-zero operations by 2027. Good for business. Great for Britain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="tech-display">
+            <div class="tech-ring tech-ring-1"></div>
+            <div class="tech-ring tech-ring-2"></div>
+            <div class="tech-ring tech-ring-3"></div>
+            <div class="tech-core">
+              <span class="core-label">AI</span>
+              <span class="core-sub">CORE</span>
+            </div>
+            <div class="tech-nodes">
+              <div class="tech-node" style="--deg:0deg">LiDAR</div>
+              <div class="tech-node" style="--deg:60deg">GPS</div>
+              <div class="tech-node" style="--deg:120deg">Vision</div>
+              <div class="tech-node" style="--deg:180deg">Radar</div>
+              <div class="tech-node" style="--deg:240deg">5G</div>
+              <div class="tech-node" style="--deg:300deg">Fleet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq" class="section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 07 FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+      </div>
+      <div class="faq-grid" id="faqGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 08 CONTACT</span>
+        <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>Chat with us directly — fastest response time.</p>
+          <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="contact-link">0612 605 737</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon contact-icon-email">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p>Detailed enquiries, partnerships &amp; enterprise.</p>
+          <a href="mailto:salatrir@gmail.com" class="contact-link">salatrir@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon contact-icon-coverage">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Coverage</h3>
+          <p>Operating in 8 major UK cities and growing.</p>
+          <a href="#areas" class="contact-link">View All Areas →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-bracket">[</span>ROBO<span class="logo-accent">TAXI</span><span class="logo-bracket">]</span>
+            <span class="logo-uk">UK</span>
+          </div>
+          <p class="footer-tagline">The Autonomous Future of British Mobility.</p>
+          <div class="footer-contact-quick">
+            <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              0612 605 737
+            </a>
+            <a href="mailto:salatrir@gmail.com" class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              salatrir@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Autonomous Taxi</a></li>
+            <li><a href="#services">Airport Transfers</a></li>
+            <li><a href="#services">Corporate Travel</a></li>
+            <li><a href="#delivery">Package Delivery</a></li>
+            <li><a href="#delivery">Same-Day Delivery</a></li>
+            <li><a href="#delivery">Last-Mile Logistics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Business</h4>
+          <ul>
+            <li><a href="#business">Fleet Management</a></li>
+            <li><a href="#business">Enterprise Solutions</a></li>
+            <li><a href="#business">Smart City Integration</a></li>
+            <li><a href="#booking">Book a Journey</a></li>
+            <li><a href="#contact">Contact Sales</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Coverage</h4>
+          <ul>
+            <li><a href="#areas">London</a></li>
+            <li><a href="#areas">Manchester</a></li>
+            <li><a href="#areas">Birmingham</a></li>
+            <li><a href="#areas">Glasgow</a></li>
+            <li><a href="#areas">Edinburgh</a></li>
+            <li><a href="#areas">+ 3 More Cities</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 RoboTaxi UK — Autonomous Mobility Platform. All rights reserved.</p>
+        <p class="footer-disclaimer">RoboTaxi UK is a mobility and logistics platform. Services presented represent planned and future autonomous operations subject to regulatory approvals.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ FLOATING WHATSAPP ═══ -->
+  <a href="https://wa.me/212612605737" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="float-pulse"></span>
+  </a>
+
+  <!-- ═══ SCROLL TO TOP ═══ -->
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="services.js"></script>
+  <script src="booking.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
